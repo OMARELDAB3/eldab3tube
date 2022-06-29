@@ -13,7 +13,7 @@ if __name__ == '__main__':
     while mm<len(lost):
         def dele():
             os.remove("youtube.py")
-            main()
+            quit()
         def main():
             global chos,link,user,passs,mm
             link = input("Enter link Video OR Channel\n>>")
@@ -40,7 +40,8 @@ Choose From list:
                     element1.append(lost[index])
                 except IndexError:
                     print("All Account IS Done Scripted BY: OmarElDab3")
-                    quit()
+                    dele()
+
             for element2 in element1:
                 user = element2.split(":")[0]
                 passs = element2.split(":")[1]
@@ -148,4 +149,4 @@ Choose From list:
                 print(f"Done Set Subscribe 2 TImes, Good Bye")
                 sleep(10)
                 mm+=1
-        dele()
+        main()
